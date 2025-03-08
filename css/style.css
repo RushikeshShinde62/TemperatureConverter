@@ -1,0 +1,59 @@
+.btn-outline-success {
+    background-color: rgba(12, 110, 61, 0.679);
+    color: rgb(255, 255, 255);
+  }
+    
+  body {
+  scroll-behavior: smooth;
+
+}
+
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* Input Fields */
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #0dd549;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+  background-color: #28a745;
+  transform: scale(1.01);
+}
+
+.btn-warning:hover {
+  background-color: #ffc107;
+  transform: scale(1.02);
+}
+
+.btn-danger:hover {
+  background-color: #dc3545;
+  transform: scale(1.02);
+}
+
+.alert {
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
