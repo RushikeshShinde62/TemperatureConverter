@@ -10,3 +10,14 @@ https://temperatureconverter-rs.netlify.app/
 - Kelvin (K) to Celsius (C)
 
 # Features
+- Open Source !
+- HTML-5 !
+- CSS !
+- Javascript !
+- Bpptstrap (Bootstrap-5)!
+- Responsice !
+
+#Author
+- Rushikesh Shinde
+
+
