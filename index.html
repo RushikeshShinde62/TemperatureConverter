@@ -9,31 +9,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/temperature.js"></script>
+    <script src="/js/temperature.js" defer></script>
   </head>
-  <body class="bg-dark-subtle">
-    <!-- Nabvar start -->
-    <div class="container-fluid bg-dark">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand text-white" href="/index.html"
-            >Temperature Converter</a
-          >
-        </div>
-      </nav>
-    </div>
+  
+  <body class="bg-light">
+    
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-gradient bg-success">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#"
+          >🌡 Temperature Converter</a
+        >
+      </div>
+    </nav>
 
-    <!-- Converter starts -->
-    <div class="container mt-5">
+    <!-- Main Converter Section -->
+    <div class="container mt-4">
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <div class="card shadow">
+          <div class="card shadow-lg border-0 rounded-4">
             <div class="card-header bg-primary text-white text-center">
-              <h3>Temperature Converter</h3>
+              <h3>Convert Temperature</h3>
             </div>
-            <div class="card-body row">
+            <div class="card-body">
               <div class="mb-3">
-                <label for="temperature" class="form-label"
+                <label for="temperature" class="form-label fw-bold"
                   >Enter Temperature</label
                 >
                 <input
@@ -43,58 +43,95 @@
                   placeholder="Enter value"
                 />
               </div>
-              <div class="mb-3 col-6">
-                <label for="fromUnit" class="form-label">From</label>
-                <select id="fromUnit" class="form-select">
-                  <option value="C" id="fc">Celsius (°C)</option>
-                  <option value="F" id="ff">Fahrenheit (°F)</option>
-                  <option value="K" id="fk">Kelvin (K)</option>
-                </select>
+              <div class="row">
+                <div class="mb-3 col-6">
+                  <label for="fromUnit" class="form-label fw-bold">From</label>
+                  <select id="fromUnit" class="form-select">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                  </select>
+                </div>
+                <div class="mb-3 col-6">
+                  <label for="toUnit" class="form-label fw-bold">To</label>
+                  <select id="toUnit" class="form-select">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                  </select>
+                </div>
               </div>
-              <div class="mb-3 col-6">
-                <label for="toUnit" class="form-label">To</label>
-                <select id="toUnit" class="form-select">
-                  <option value="C" id="tc">Celsius (°C)</option>
-                  <option value="F" id="tf">Fahrenheit (°F)</option>
-                  <option value="K" id="tk">Kelvin (K)</option>
-                </select>
+
+              <div class="text-center row">
+                <button
+                  class="btn btn-success w-100 mb-2 p-2"
+                  onclick="convertTemperature()"
+                >
+                  <i class="fas fa-exchange-alt"></i> Convert
+                </button>
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-warning w-50 me-2" onclick="swap()">
+                    <i class="fas fa-random"></i> Swap
+                  </button>
+                  <button class="btn btn-danger w-50" onclick="resetForm()">
+                    <i class="fas fa-undo"></i> Reset
+                  </button>
+                </div>
               </div>
-              <button
-                class="btn btn-outline-success text-center"
-                onclick="convertTemperature()"
-              >
-                Convert
-              </button>
-              <div class="alert alert-info mt-3" id="resultBox">
-                <span><strong>Result will be here</strong></span>
+              <div class="alert alert-info mt-3 text-center" id="resultBox">
+                Result will be displayed here
               </div>
-            </div>
-            <div class="card-footer text-center">
-              <button class="btn btn-outline-danger" onclick="resetForm()">
-                Reset
-              </button>
-              <button class="btn btn-outline-warning" onclick="swap()">
-                Swap
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!--Footer starts -->
-    <!-- Footer Starts -->
+    <!-- How to use Section  Starts-->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>How to Use</h4>
+          <ul class="list-group">
+            <li class="list-group-item">1️⃣ Enter the temperature value.</li>
+            <li class="list-group-item">
+              2️⃣ Select the units to convert from and to.
+            </li>
+            <li class="list-group-item">
+              3️⃣ Click "Convert" to see the result.
+            </li>
+            <li class="list-group-item">
+              4️⃣ Use "Swap" to quickly exchange units.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Do you know section  starts -->
+        <div class="col-md-6">
+          <h4>Did You Know?</h4>
+          <div class="alert alert-success">
+            The coldest temperature ever recorded on Earth was -128.6°F
+            (-89.2°C) in Antarctica! ❄️
+          </div>
+          <div class="alert alert-success">
+            The highest natural temperature recorded was 134°F (56.7°C) in Death
+            Valley, California in 1913. 🔥
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Footer starts -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
       <div class="container">
-        <p class="mb-2">&copy; 2025 Designed By Rushikesh Shinde</p>
-        <div>
-          <p></p>
-          <p></p>
-          
-        </div>
+        <p class="mb-2">
+          &copy; 2025 Designed By <strong>Rushikesh Shinde</strong>
+        </p>
       </div>
     </footer>
 
+<!--Bootstrap JS Links -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
