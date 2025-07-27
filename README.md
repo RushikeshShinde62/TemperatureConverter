@@ -14,7 +14,7 @@ https://temperatureconverter-rs.netlify.app/
 - HTML-5 !
 - CSS !
 - Javascript !
-- Bpptstrap (Bootstrap-5)!
+- Bootstrap (Bootstrap-5)!
 - Responsice !
 
 # Author 
