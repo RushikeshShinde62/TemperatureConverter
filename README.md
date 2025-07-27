@@ -15,7 +15,7 @@ https://temperatureconverter-rs.netlify.app/
 - CSS !
 - Javascript !
 - Bootstrap (Bootstrap-5)!
-- Responsice !
+- Responsive !
 
 # Author 
 Rushikesh Shinde
